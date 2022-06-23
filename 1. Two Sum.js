@@ -1,17 +1,13 @@
-var arr = [23,45,67,9,0];
 var output = [];
-var target = 32;
-
-function result(arr,output,target){
-    for (let i = 0 ; i < arr.length ; i++ ){
-        for (let j = i+1; j < arr.length ; j++){
-            if (arr[i] + arr[j] == target){
+function twoSum(nums, target){
+    for (let i = 0 ; i < nums.length ; i++ ){
+        for (let j = i+1; j < nums.length ; j++){
+            if (nums[i] + nums[j] == target){
                 output.push(i,j);
             }    
-        }
-        
+        }        
     }
     return output;
 }
-
-console.log(result(arr,output,target));
+var ret = twoSum([2,7,11,15],9) 
+console.log(ret);

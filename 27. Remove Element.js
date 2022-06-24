@@ -1,12 +1,18 @@
-function rm(arr,val){
-    for (let i = 0 ; i<arr.length ; i++){
-        if (arr[i] === val){
-            arr[i] ="_";
-        }
-        // console.log(arr[i]);
+const nums = [0,1,2,2,3,0,4,2];
+const val = 2;
+// const val = 3;
+// Output: 2, nums = [2,2,_,_]
+
+const res = [];
+let count = 0;
+
+for (let i = 0 ; i < nums.length; i++){
+    if(nums[i] === val){
+        res.push('_');
+    } else {
+        count += 1;
+        res.push(nums[i]);
     }
-    return arr;
 }
-let arr = [2,9,4,7,7,3,1];
-let val = 7;
-console.log(rm(arr,val));
+
+console.log(res, count);
